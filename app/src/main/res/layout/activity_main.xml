@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.example.qhsj.myapplication.bean.MainViewModel"/>
+        <variable
+            name="bean1"
+            type="MainViewModel"/>
+
+        <import type="com.example.qhsj.myapplication.bean.ObservableUser"/>
+        <variable
+            name="bean2"
+            type="ObservableUser"/>
+
+        <import type="com.example.qhsj.myapplication.MainActivity"/>
+        <variable
+            name="click"
+            type="MainActivity" />
+
+        <import type="com.example.qhsj.myapplication.bean.People"/>
+        <variable
+            name="people"
+            type="People" />
+    </data>
+
+    <!-- TextView 只能写一个？-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:onClick="@{click.click}"-->
+        <!--android:text="@{bean1.firstName}" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:text="@{bean2.firstName}" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@{String.valueOf(people.age)}" />
+
+
+</layout>
